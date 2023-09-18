@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+
+    <title>Motocilcetas</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+
+<header>
+</header>
+
+<section>
+   <p>Una motocicleta, comúnmente conocida en español con la abreviatura moto, es un vehículo de dos ruedas,1​ 
+    impulsado por un motor de combustión interna a gasolina que acciona la rueda trasera, en raras excepciones 
+    en las que el impulso se daría en la rueda delantera o en ambas, superior a 50 cc. si es de combustión 
+    interna y con una velocidad máxima por construcción superior a 45 km/h.1​ El cuadro o chasis y las ruedas 
+    constituyen la estructura fundamental del vehículo. La rueda directriz es la delantera. 
+    Pueden transportar hasta dos personas, y tres si están dotadas de sidecar.2​
+    También es conocida coloquialmente con el nombre de motor en países como República Dominicana.</p>
+    <IMG src="https://live.staticflickr.com/1385/615981442_f66ac7f654_h.jpg" sizes="50%" height="530px" width="700px">
+    <link rel="stylesheet" href="style.css">
+</section>
+
+<footer>
+
+</footer>
+
+
+<script>
+
+    async function populate() {
+
+        const requestURL = 'supermotos.json';
+        const request = new Request(requestURL);
+
+        const response = await fetch(request);
+        const fichatecnicamotos = await response.text();
+
+        const supermotos = JSON.parse(fichatecnicamotos);
+        populateHeader(supermotos);
+        populateMotos(supermotos);
+        andres(supermotos)
+
+
+    }
+
+    function populateHeader(obj) {
+        const header = document.querySelector('header');
+        const myH1 = document.createElement('h1');
+        myH1.textContent = obj.Namemoto;
+        header.appendChild(myH1);
+
+        const myPara = document.createElement('p');
+        myPara.textContent = `CIUDAD NATAL: ${obj.ciudad} // Formed: ${obj.ano}`;
+        header.appendChild(myPara);
+    }
+
+    function populateMotos(obj) {
+        const section = document.querySelector('section');
+        const motos = obj.members;
+
+        for (const hero of motos) {
+            const myArticle = document.createElement('article');
+            const myH2 = document.createElement('h2');
+            const myPara1 = document.createElement('p');
+            const myPara2 = document.createElement('p');
+            const myPara3 = document.createElement('p');
+            const myList = document.createElement('ul');
+            const myimage =document.createElement('img');
+            myH2.textContent = hero.name;
+            myPara1.textContent = `Linea: ${hero.secretIdentity}`;
+            myPara2.textContent = `Centimetros Cubicos: ${hero.centimetros}`;
+            myPara3.textContent = '';
+            myimage.src = hero.image; 
+
+            const superPowers = hero.powers;
+            for (const power of superPowers) {
+                const listItem = document.createElement('li');
+                listItem.textContent = power;
+                myList.appendChild(listItem);
+            }
+
+            myArticle.appendChild(myH2);
+            myArticle.appendChild(myPara1);
+            myArticle.appendChild(myPara2);
+            myArticle.appendChild(myPara3);
+            myArticle.appendChild(myList);
+            myArticle.appendChild(myimage);
+
+            section.appendChild(myArticle);
+        }
+    }
+
+    function andres(obj) {
+        const footer = document.querySelector('footer');
+        const myh4 = document.createElement('h4');
+        const myh5 = document.createElement('h5');
+        const myh6 = document.createElement('h6');
+        myh4.textContent = obj.Autor;
+        myh5.textContent=obj.Programa;
+        myh6.textContent=obj.Age;
+        footer.appendChild(myh4);
+        footer.appendChild(myh5);
+        footer.appendChild(myh6);
+
+    }
+    populate();
+
+</script>
+</body>
+</html>

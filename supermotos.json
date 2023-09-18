@@ -1,0 +1,82 @@
+{
+    "Namemoto": "Ficha tecnica Motos",
+    "Ciudad": "Bogota City",
+    "ano": 2023,
+    "secretBase": "Super tower",
+    "active": true,
+    "members": [
+        {
+            "name": "BMW",
+            "centimetros": 1000,
+            "secretIdentity": "RR",
+            "powers": [
+                "Agil",
+                "Veloz",
+                "Confiable"
+            ],
+        "image":"https://live.staticflickr.com/8377/8600794013_0d8b2a3055_m.jpg width=240 height=180"
+        },
+        {
+            "name": "KAWASAKI",
+            "centimetros": 1000,
+            "secretIdentity": "H2 RR",
+            "powers": [
+                "Aerodinamica",
+                "Supercargada",
+                "Record de velocidad"
+            ],
+        "image":"https://live.staticflickr.com/4384/36078488900_5deeae0029_m.jpg"
+        },
+        {
+            "name": "KTM",
+            "centimetros": 1290,
+            "secretIdentity": "Super Duke",
+            "powers": [
+                "Super naiked",
+                "Super agil",
+                "Torque maximo",
+                "Max tecnologia"
+            ],
+        "image":"https://live.staticflickr.com/65535/51354473213_bfd82c70b1_m.jpg width=240 height=180"
+        },
+        {
+            "name": "SUZUKI",
+            "centimetros": 750,
+            "secretIdentity": "GSX-R",
+            "powers": [
+                "Super naiked",
+                "Super agil",
+                "Torque maximo",
+                "Max Velocidad"
+            ],
+        "image":"https://live.staticflickr.com/3499/3916971174_3915fe06ba_m.jpg"
+        },
+        {
+            "name": "HONDA",
+            "centimetros": 1000,
+            "secretIdentity": "CBR",
+            "powers": [
+                "Super sport",
+                "Anti willy",
+                "Suspension asistida",
+                "Max tecnologia"
+            ],
+        "image":"https://live.staticflickr.com/65535/51774009338_6ed8c53f34_m.jpg"
+        },
+        {
+            "name": "BAJAJ",
+            "centimetros": 200,
+            "secretIdentity": "Naiked Sport",
+            "powers": [
+                "Naiked Sport",
+                "Agil",
+                "Velocidad",
+                "Personalizable"
+            ],
+        "image":"img//mimg.jpg"
+        }
+    ],
+    "Autor": "Andres Rivera",
+    "Programa":"Ing Software",
+    "Age":"2023"
+}
